@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+
+.credits{
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#1ea7dd,#b27feb,#d1dfa2);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 550px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin: 6rem 0;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+#input-box{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: .5rem 0;
+    background: transparent;
+
+}
+
+button{
+    padding: 1rem;
+    background: #51c623;
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
+
+}
+
+button:hover{
+    background: #42a11c;
+}
+
+
+ul li{
+    position: relative;
+    list-style: none;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 200ms;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-image: url(/img/checkbox.png) ;
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+} 
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #808080;
+}
+
+ul li.checked::before{
+    background-image: url(/img/check-mark.png);
+}
+
+ul li span{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    line-height: 40px;
+    transition: 200ms ease-in-out;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: rgb(227, 88, 63);
+    color: white;
+}
